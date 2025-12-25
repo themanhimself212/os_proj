@@ -1,0 +1,29 @@
+# Reporter Dockerfile
+# Generates HTML dashboard from metrics.json
+
+FROM alpine:latest
+
+# Install Python 3
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    && ln -sf python3 /usr/bin/python
+
+# Set working directory
+WORKDIR /app
+
+# Copy only reporter-related files
+COPY app/generate_html_dashboard.py /app/
+
+# Create necessary directories
+RUN mkdir -p /app/reports
+
+# Make Python script executable
+RUN chmod +x /app/generate_html_dashboard.py
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Default command - generate dashboard
+CMD ["python3", "/app/generate_html_dashboard.py"]
+

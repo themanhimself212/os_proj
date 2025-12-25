@@ -1,0 +1,43 @@
+# Collector Dockerfile
+# Collects system metrics and outputs to metrics.json
+
+FROM alpine:latest
+
+# Install necessary dependencies for metrics collection
+RUN apk add --no-cache \
+    bash \
+    jq \
+    bc \
+    coreutils \
+    procps \
+    util-linux \
+    grep \
+    sed \
+    awk
+
+# Set working directory
+WORKDIR /app
+
+# Copy all collector-related scripts
+COPY app/scripts/collect_metrics.sh /app/scripts/
+COPY app/scripts/monitor.sh /app/scripts/
+COPY app/scripts/collect_and_dashboard.sh /app/scripts/
+COPY app/scripts/continuous_collect_and_dashboard.sh /app/scripts/
+COPY app/scripts/generate_report.sh /app/scripts/
+
+# Create necessary directories
+RUN mkdir -p /app/logs /app/reports
+
+# Make scripts executable
+RUN chmod +x /app/scripts/*.sh
+
+# Set environment variables
+ENV MONITOR_INTERVAL=5
+ENV CONTINUOUS_MODE=false
+ENV ALERT_CPU=80
+ENV ALERT_MEM=85
+ENV ALERT_DISK=90
+
+# Default command - run monitor once
+CMD ["/app/scripts/monitor.sh", "-o"]
+

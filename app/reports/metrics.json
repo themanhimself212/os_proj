@@ -1,0 +1,235 @@
+{
+        "timestamp": "2025-12-25T14:55:35+02:00",
+        "hostname": "seifs-MacBook-Pro.local",
+        "cpu": {
+        "cpu_usage_percent": 4.80,
+        "cpu_cores": 8,
+        "cpu_model": "Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz",
+        "cpu_temperature": "N/A",
+        "load_average": "1.54 1.50 1.61"
+    },
+        "gpu": {
+        "gpu_usage_percent": "Available (Intel Iris Plus Graphics 645)",
+        "gpu_temperature": "N/A",
+        "gpu_memory": "(Dynamic, Max):"
+    },
+        "disk": [{
+                "filesystem": "/dev/disk1s4s1",
+                "size": "113Gi",
+                "used": "8.7Gi",
+                "available": "60Gi",
+                "use_percent": 13,
+                "mount_point": "356882 633634280 0% /",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "devfs",
+                "size": "190Ki",
+                "used": "190Ki",
+                "available": "0Bi",
+                "use_percent": 100,
+                "mount_point": "656 0 100% /dev",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "/dev/disk1s2",
+                "size": "113Gi",
+                "used": "4.9Gi",
+                "available": "60Gi",
+                "use_percent": 8,
+                "mount_point": "1560 633634280 0% /System/Volumes/Preboot",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "/dev/disk1s5",
+                "size": "113Gi",
+                "used": "1.0Gi",
+                "available": "60Gi",
+                "use_percent": 2,
+                "mount_point": "1 633634280 0% /System/Volumes/VM",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "/dev/disk1s6",
+                "size": "113Gi",
+                "used": "21Mi",
+                "available": "60Gi",
+                "use_percent": 1,
+                "mount_point": "23 633634280 0% /System/Volumes/Update",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "/dev/disk1s1",
+                "size": "113Gi",
+                "used": "35Gi",
+                "available": "60Gi",
+                "use_percent": 37,
+                "mount_point": "359088 633634280 0% /System/Volumes/Data",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "map",
+                "size": "auto_home",
+                "used": "0Bi",
+                "available": "0Bi",
+                "use_percent": 0,
+                "mount_point": "100% 0 0 100% /System/Volumes/Data/home",
+                "smart_status": "N/A"
+            },{
+                "filesystem": "/dev/disk2s1",
+                "size": "466Gi",
+                "used": "13Gi",
+                "available": "453Gi",
+                "use_percent": 3,
+                "mount_point": "119555 4294847724 0% /Volumes/Extreme SSD",
+                "smart_status": "N/A"
+            }],
+        "memory": {
+        "memory_total_mb": 8192,
+        "memory_used_mb": 6754,
+        "memory_free_mb": 68,
+        "memory_available_mb": 2462,
+        "memory_usage_percent": 82.00,
+        "swap_total_mb": 1024,
+        "swap_used_mb": 373,
+        "swap_free_mb": 651,
+        "swap_usage_percent": 36.00
+    },
+        "network": [{
+                "interface": "ap1",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 430945,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "awdl0",
+                "ip_address": "N/A",
+                "rx_bytes": 58994,
+                "tx_bytes": 43506,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "bridge0",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "en0",
+                "ip_address": "172.20.10.3",
+                "rx_bytes": 406055976,
+                "tx_bytes": 38573927,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "en1",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "en2",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "en3",
+                "ip_address": "N/A",
+                "rx_bytes": 5984152,
+                "tx_bytes": 23645234,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "gif0*",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "llw0",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "stf0*",
+                "ip_address": "N/A",
+                "rx_bytes": 0,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "utun0",
+                "ip_address": "N/A",
+                "rx_bytes": 4,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "utun1",
+                "ip_address": "N/A",
+                "rx_bytes": 2,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "utun2",
+                "ip_address": "N/A",
+                "rx_bytes": 3,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "utun3",
+                "ip_address": "N/A",
+                "rx_bytes": 100,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            },{
+                "interface": "utun4",
+                "ip_address": "N/A",
+                "rx_bytes": 3,
+                "tx_bytes": 0,
+                "rx_packets": 0,
+                "tx_packets": 0,
+                "rx_errors": 0,
+                "tx_errors": 0
+            }],
+        "system_load": {
+        "load_1min": 1.57,
+        "load_5min": 1.51,
+        "load_15min": 1.62,
+        "uptime": "0d 14h 11m 43s",
+        "uptime_seconds": 51103
+    }
+    }

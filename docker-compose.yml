@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  collector:
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+    container_name: metrics-collector
+    image: metrics-collector:latest
+    volumes:
+      # Mount logs and reports directories to persist data
+      - ./app/logs:/app/logs
+      - ./app/reports:/app/reports
+    environment:
+      - MONITOR_INTERVAL=5
+      - CONTINUOUS_MODE=false
+      - ALERT_CPU=80
+      - ALERT_MEM=85
+      - ALERT_DISK=90
+    # Uncomment if you want to run in continuous mode
+    # command: ["/app/scripts/monitor.sh", "-c", "-i", "5"]
+    
+    # Restart policy
+    restart: unless-stopped
+
+  reporter:
+    build:
+      context: .
+      dockerfile: Dockerfile.reporter
+    container_name: dashboard-reporter
+    image: dashboard-reporter:latest
+    volumes:
+      # Mount reports directory to read metrics.json and write dashboard.html
+      - ./app/reports:/app/reports
+    depends_on:
+      - collector
+    # Wait for collector to finish, then generate dashboard
+    # You can also run this manually after collector completes
+    restart: "no"
+    
+    # If you want to serve the dashboard via HTTP, uncomment below:
+    # ports:
+    #   - "8000:8000"
+    # command: ["sh", "-c", "python3 /app/generate_html_dashboard.py && python3 -m http.server 8000 --directory /app/reports"]
+
